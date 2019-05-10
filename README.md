@@ -22,7 +22,7 @@ https://ykud.com/blog/cognos/tm1-cognos/java-tm1-extensions-tm1financelib-for-ca
     JavaJVMPath=C:\Program Files\ibm\cognos\tm1_64\bin64\jre\7.0\bin\j9vm\jvm.dll
     JavaClassPath=C:\Program Files\ibm\cognos\tm1_64\samples\tm1\SData\}javaextensions\libraries\poi-3.14-20160307.jar
 ```
-* Restart server and you should be able to use the functions straight away as per examples above
+* Restart server and you should be able to use the functions straight away as per examples below
 
 
 
@@ -44,57 +44,87 @@ Example usage in TI:
 
 `vNPV = ExecuteJavaN('tm1financelib.NPV', 0.1, '-10000.00','3000','4200','6800');`
 
-– NPER
+* NPER
+
 Syntax: nper(rate, payment in period, present value, future value, boolean type)
+
 Example usage in TI:
 `vNPV =  ExecuteJavaN('tm1financelib.NPV', 0.1, '-10000.00','3000','4200','6800');`
 
-– PPMT
+* PPMT
+
 Syntax: PPMT(rate, period, number of periods, present value, future value, boolean type)
+
 Example usage in TI:
 `vPPMT = ExecuteJavaN('tm1financelib.PPMT', 0.0083333333, 1,24, 2000, 0,0);`
 
-– IPMT
+* IPMT
+
 Syntax: IPMT(rate, period, number of periods, present value, future value, boolean type)
+
 Example usage in TI:
 `vIPMT = ExecuteJavaN('tm1financelib.IPMT', 0.0083333333, 1,24, 2000, 0,0);`
 
-– DEVSQ
+* DEVSQ
+
 Syntax: DEVSQ (values)
+
 Example usage in TI:
+
 `vDEVSQ = ExecuteJavaN('tm1financelib.DEVSQ','-70000.00','12000','15000','18000','21000','26000');`
 
-– AVEDEV
+* AVEDEV
+
 Syntax: AVEDEV (values)
+
 Example usage in TI:
+
 `vAVEDEV = ExecuteJavaN('tm1financelib.AVEDEV','-70000.00','12000','15000','18000','21000','26000');`
 
-– MEDIAN
+* MEDIAN
+
 Syntax: MEDIAN (values)
+
 Example usage in TI:
+
 `vMEDIAN = ExecuteJavaN('tm1financelib.MEDIAN','-70000.00','12000','15000','18000','21000','26000');`
 
-– VAR
+* VAR
+
 Syntax: VAR (values)
+
 Example usage in TI:
+
 `vVAR = ExecuteJavaN('tm1financelib.VAR', '-70000.00','12000','15000','18000','21000','26000');`
 
-– VARP
+* VARP
+
 Syntax: VARP (values)
+
 Example usage in TI:
+
 `vVARP = ExecuteJavaN('tm1financelib.VARP', '-70000.00','12000','15000','18000','21000','26000');`
 
-– FV
+* FV
+
 Syntax: FV (rate, payment in period, present value, future value, boolean type)
+
 Example usage in TI:
+
 `vFV = ExecuteJavaN('tm1financelib.FV', 0.005, 10,-200,-500,1);`
 
-– PV
+* PV
+
 Syntax: PV(rate, number of periods, payment, future value, boolean type)
+
 Example usage in TI:
+
 `vPV = ExecuteJavaN('tm1financelib.PV', 0.006666667, 240,500, 0,0);`
 
-– PMT
+* PMT
+
 Syntax: PMT(rate, number of periods, present value, future value, boolean type)
+
 Example usage in TI:
+
 `vPMT = ExecuteJavaN('tm1financelib.PMT', 0.006666667, 10,10000, 0,0);`

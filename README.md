@@ -10,18 +10,24 @@ https://ykud.com/blog/cognos/tm1-cognos/java-tm1-extensions-tm1financelib-for-ca
 ## Installation instructions
 
 * Download tm1financelib.jar and poi jar from jar folder in this project -- select the version for your TM1 / PA version
-* Copy tm1financelib.jar to TM1 server\}javaextensions\ or TM1_installation\}javaextensions (to make it available from all TM1 servers), poi jar to a place you’d keep libraries (I just put it the same place as javaextensions, just create a libraries folder next to ibm). See more details in the [IBM instructions](http://www.ibm.com/support/knowledgecenter/?lang=en#!/SS9RXT_10.3.0/com.ibm.swg.ba.cognos.tm1_turb.10.3.0.doc/c_tm1_enabling_configuring_java_extensions.html)
+* Copy tm1financelib.jar to TM1 server\}javaextensions\ibm\ or TM1_installation\javaextensions (to make it available from all TM1 servers), poi jar to a place you’d keep libraries (I just put it the same place as javaextensions, just create a libraries folder next to ibm). See more details in the [IBM instructions](https://www.ibm.com/support/knowledgecenter/SSD29G_2.0.0/com.ibm.swg.ba.cognos.tm1_turb.2.0.0.doc/c_tm1_enabling_configuring_java_extensions.html)
 
 * Configure java in your tm1s.cfg file:
 ```
     JavaHome — point to the JVM shipped with TM1
     JavaClassPath — add the folder you’ve copied poi jar
 ```
- For example, with default Windows installation:
+ For example, with default Windows installation (for TM1 10.2.2 to PA 2.0.5)
 ```
     JavaJVMPath=C:\Program Files\ibm\cognos\tm1_64\bin64\jre\7.0\bin\j9vm\jvm.dll
     JavaClassPath=C:\Program Files\ibm\cognos\tm1_64\samples\tm1\SData\}javaextensions\libraries\poi-3.14-20160307.jar
 ```
+For 2.0.6 onwards Java path changes to reflect the JRE version update:
+```
+    JavaJVMPath=C:\Program Files\ibm\cognos\tm1_64\jre\bin\j9vm\jvm.dll
+    JavaClassPath=C:\Program Files\ibm\cognos\tm1_64\samples\tm1\SData\}javaextensions\libraries\poi-3.14-20160307.jar
+```
+
 * Restart server and you should be able to use the functions straight away as per examples below
 
 

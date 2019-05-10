@@ -1,13 +1,13 @@
 # tm1financelib
 
-# Overview
+## Overview
 
 This is a library of 'wrapper' functions to calculate the various financial functions in TM1 / Planning Analytics via Java extensions. These functions are calling Apache POI (https://en.wikipedia.org/wiki/Apache_POI) implementations for their Excel analogues.
 
 See more details on:
 https://ykud.com/blog/cognos/tm1-cognos/java-tm1-extensions-tm1financelib-for-calculating-irr-npv-and-more
 
-# Installation instructions
+## Installation instructions
 
 * Download tm1financelib.jar and poi jar from jar folder in this project -- select the version for your TM1 / PA version
 * Copy tm1financelib.jar to TM1 server\}javaextensions\ or TM1_installation\}javaextensions (to make it available from all TM1 servers), poi jar to a place you’d keep libraries (I just put it the same place as javaextensions, just create a libraries folder next to ibm). See more details in the [IBM instructions](http://www.ibm.com/support/knowledgecenter/?lang=en#!/SS9RXT_10.3.0/com.ibm.swg.ba.cognos.tm1_turb.10.3.0.doc/c_tm1_enabling_configuring_java_extensions.html)
@@ -26,16 +26,22 @@ https://ykud.com/blog/cognos/tm1-cognos/java-tm1-extensions-tm1financelib-for-ca
 
 
 
-# Included Functions
+## Included Functions
 
 * IRR
+
 Syntax: IRR (guess, values)
+
 Example usage in TI:
+
 `vIRR = ExecuteJavaN('tm1financelib.IRR', -0.01,'-70000.00','12000','15000','18000','21000','26000');`
 
-– NPV
+* NPV
+
 Syntax: NPV(rate, values)
+
 Example usage in TI:
+
 `vNPV = ExecuteJavaN('tm1financelib.NPV', 0.1, '-10000.00','3000','4200','6800');`
 
 – NPER
